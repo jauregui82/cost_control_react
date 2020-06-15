@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+// import firebase from './config/firebase';
+// import ChatRoom from './components/ChatRoom';
+import { HistorialPayment } from './components/historial';
+import Layout from './components/Layout';
+// import './utils/Firebase.js';
+// import dotenv from 'dotenv'
+// dotenv.config()
+// console.log(process.env.REACT_APP_FIREBASE_APIKEY);
 
-function App() {
+export  const App = () => {
+  // console.log(firebase.name);
+  // console.log(firebase.database());
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ChatRoom /> */}
+      <Layout>
+        <HistorialPayment />
+      </Layout>
     </div>
   );
 }
-
-export default App;
