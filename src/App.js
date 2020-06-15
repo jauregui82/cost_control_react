@@ -3,7 +3,6 @@ import React from 'react';
 import './App.css';
 // import firebase from './config/firebase';
 // import ChatRoom from './components/ChatRoom';
-import { HistorialPayment } from './components/historial';
 import Layout from './components/Layout';
 // import './utils/Firebase.js';
 // import dotenv from 'dotenv'
@@ -17,7 +16,7 @@ export  const App = () => {
     <div className="App">
       {/* <ChatRoom /> */}
       <Layout>
-        <HistorialPayment />
+        <div>Bienvenido</div>
       </Layout>
     </div>
   );

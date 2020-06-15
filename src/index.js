@@ -3,15 +3,11 @@ import ReactDOM from 'react-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { App } from './App';
-import { mainTheme } from './MuiTheme';
+import { Routes } from './components/Routes';
 // Style theme
-const theme = createMuiTheme(mainTheme);
 ReactDOM.render(
   <>
-    <MuiThemeProvider theme={theme}>
-      <App />
-    </MuiThemeProvider>
+    <Routes/>
   </>,
   document.getElementById('root')
 );

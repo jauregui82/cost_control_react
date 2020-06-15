@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import {
-  CssBaseline, withStyles, Container, Fade,
+  CssBaseline, withStyles, Container,
 } from '@material-ui/core';
 import Topbar from './views/Topbar';
-import Sidebar from './views/Sidebar';
+// import Sidebar from './views/Sidebar';
 // // Apollo client
 // import { useQuery } from '@apollo/client';
 // import { GET_AVAILABLE_SERVICES } from 'src/models/RegisterModel';
@@ -41,7 +41,7 @@ const Layout = (props) => {
         setChecked={setChecked}
         closeSession={() => setOpen(false)}
       />
-      <Sidebar open={sidebarOpen} setOpen={setOpen} />
+      {/* <Sidebar open={sidebarOpen} setOpen={setOpen} /> */}
       <main className={classes.content}>
         {/* <Fade in={checked}>
           <span onClick={() => setChecked(false)} className="wraper-found-user-detail" />

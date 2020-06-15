@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { withStyles, useTheme, Tooltip } from '@material-ui/core';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -43,7 +43,7 @@ const Sidebar = (props) => {
       icon: <InboxIcon />,
       permission: true,
       title: 'Listado de operaciones',
-      value: '/list-payers',
+      value: '/history',
     },
     // {
     //   id: 3,
@@ -77,10 +77,10 @@ const Sidebar = (props) => {
           {menuList.map((item, index) => (
             <CustomListItem
               button
-              // component={Link}
+              component={Link}
               divider
               key={item.id}
-              // selected={compareLocationsPaths(item.value, location)}
+              selected={compareLocationsPaths(item.value, location)}
               to={item.value}
               // disabled={!payerState.payerSelected.id}
             >

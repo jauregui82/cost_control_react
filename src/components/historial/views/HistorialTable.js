@@ -7,6 +7,8 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import { Button, Tooltip, Grid } from '@material-ui/core';
 
 export const HistorialTable = (props) => {
+    console.log('props===>>>',props);
+    
   const option = {
     ...options,
     selectableRows: 'multiple',
@@ -72,7 +74,7 @@ export const HistorialTable = (props) => {
       },
     },
     {
-      name: 'payment_date',
+      name: 'fullName',
       label: 'Destinatario',
       options: {
         filter: false,
@@ -80,15 +82,24 @@ export const HistorialTable = (props) => {
       },
     },
     {
-      name: 'representative',
+      name: 'operationType',
       label: 'Tipo',
+      options: {
+        filter: false,
+        sort: false,
+        // customBodyRender:(value)=>{ return value=== 'si'? "Envío a venezuela" : "Transferencia"}
+      },
+    },
+    {
+      name: 'created',
+      label: 'Fecha de solicitud',
       options: {
         filter: false,
         sort: false,
       },
     },
     {
-      name: 'payment_date',
+      name: 'paymentDate',
       label: 'Fecha de pago',
       options: {
         filter: false,
@@ -125,7 +136,7 @@ export const HistorialTable = (props) => {
       <Grid item xs={12} sm={12}>
         {/* {props.data.results ? ( */}
         <MuiThemeProvider theme={dashboardTableTheme}>
-          <MUIDataTable title="Listado" columns={columns} options={option} data={[]} />
+          <MUIDataTable title="Listado" columns={columns} options={option} data={props.data} />
         </MuiThemeProvider>
         {/* ) : (
           <p> No hay datos dispobiles para mostrar. </p>
